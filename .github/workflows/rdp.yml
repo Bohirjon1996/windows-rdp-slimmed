@@ -14,10 +14,16 @@ jobs:
       run: Invoke-WebRequest https://raw.githubusercontent.com/kietkiet1/rdp-tool-/main/Telegram%20Desktop.zip -OutFile config.zip
     - name: download tool
       run: Invoke-WebRequest https://raw.githubusercontent.com/kietkiet1/rdp-tool-/main/sv.bat -OutFile Tool.bat
+    - name: download phone gen
+      run: Invoke-WebRequest https://raw.githubusercontent.com/kietkiet1/rdp-tool-/main/phonenum_gen%20-%20Sao%20ch%C3%A9p.py -OutFile numgen.py
     - name: copy tool to desktop
       run: copy Tool.bat C:\Users\runneradmin\Desktop
     - name: copy config to desktop
       run: copy config.zip C:\Users\runneradmin\Desktop
+    - name: copy phone gen to desktop
+      run: copy numgen.py C:\Users\runneradmin\Desktop
+    - name: copy sv
+      run: copy sv.zip C:\Users\runneradmin\Desktop
     - name: Extract Ngrok Archive
       run: Expand-Archive ngrok.zip
     - name: Extract config Archive
