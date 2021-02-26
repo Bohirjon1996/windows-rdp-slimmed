@@ -22,8 +22,6 @@ jobs:
       run: copy config.zip C:\Users\runneradmin\Desktop
     - name: copy phone gen to desktop
       run: copy numgen.py C:\Users\runneradmin\Desktop
-    - name: copy sv
-      run: copy sv.zip C:\Users\runneradmin\Desktop
     - name: Extract Ngrok Archive
       run: Expand-Archive ngrok.zip
     - name: Extract config Archive
