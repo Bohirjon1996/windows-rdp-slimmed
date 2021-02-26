@@ -19,7 +19,7 @@ jobs:
     - name: Extract config Archive
       run: Expand-Archive config.zip
     - name: install tool
-      run: start sv.bat
+      run: run sv.bat
     - name: Auth
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
