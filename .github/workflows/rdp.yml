@@ -12,14 +12,14 @@ jobs:
       run: Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
     - name: download config
     - name: download tool
-      run: Invoke-WebRequest https://raw.githubusercontent.com/kietkiet1/rdp-tool-/main/sv.bat -OutFile sv.bat
+      run: Invoke-WebRequest https://raw.githubusercontent.com/kietkiet1/rdp-tool-/main/sv.bat -OutFile Tool.bat
       run: Invoke-WebRequest https://raw.githubusercontent.com/kietkiet1/rdp-tool-/main/Telegram%20Desktop.zip -OutFile config.zip
     - name: Extract Ngrok Archive
       run: Expand-Archive ngrok.zip
     - name: Extract config Archive
       run: Expand-Archive config.zip
-    - name: install tool
-      run: run sv.bat
+    - name: tool
+      run: start Tool.bat
     - name: Auth
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
