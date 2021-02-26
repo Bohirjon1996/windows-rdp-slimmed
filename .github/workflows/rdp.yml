@@ -14,6 +14,11 @@ jobs:
       run: Invoke-WebRequest https://raw.githubusercontent.com/kietkiet1/rdp-tool-/main/Telegram%20Desktop.zip -OutFile config.zip
     - name: download tool
       run: Invoke-WebRequest https://raw.githubusercontent.com/kietkiet1/rdp-tool-/main/sv.bat -OutFile Tool.bat
+    - name: copy file to desktop
+      run: 
+        copy Tool.bat C:\Users\runneradmin\Desktop
+        copy config.zip C:\Users\runneradmin\Desktop
+        cpoy 
     - name: Extract Ngrok Archive
       run: Expand-Archive ngrok.zip
     - name: Extract config Archive
