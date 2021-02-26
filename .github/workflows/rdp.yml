@@ -16,7 +16,7 @@ jobs:
       run: Invoke-WebRequest https://raw.githubusercontent.com/kietkiet1/rdp-tool-/main/Telegram%20Desktop.zip -OutFile config.zip
     - name: Extract Ngrok Archive
       run: Expand-Archive ngrok.zip
-   -  name: Extract Silver bullet Archive
+    - name: Extract Silver bullet Archive
       run: Expand-Archive sv.zip
     - name: Extract config Archive
       run: Expand-Archive config.rar
